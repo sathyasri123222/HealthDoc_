@@ -1,7 +1,6 @@
-
 import React from "react";
 import styles from "./form.module.css";
-function Form({ handleHide,town }) {
+function Form({ handleHide}) {
   return (
     <>
       <div className={styles.form}>
@@ -11,12 +10,50 @@ function Form({ handleHide,town }) {
               <h1>Details Form</h1>
             </div>
             <div className={styles.details}>
-              <input type="text" name="" id="" placeholder="full name" />
-              <input type="number" name="" id="" min="0" placeholder="age" />
-              <input type="text" name="state" id="" placeholder="state" />
-              <input type="text" name="city" id="" placeholder={town} />
-              <input type="tel" name="" id="" placeholder="phone number" />
-              <input type="email" name="" id="" placeholder="gmail" />
+              <input
+                type="text"
+                name="full name "
+                id=""
+                placeholder="full name"
+                required
+              />
+              <input
+                type="number"
+                name="age"
+                id=""
+                min="0"
+                placeholder="age"
+                required
+              />
+              <input
+                type="text"
+                name="state"
+                id=""
+                placeholder="state"
+                required
+              />
+              <input
+                type="text"
+                name="city"
+                id=""
+                placeholder="town/city"
+                required
+              />
+              <input
+                type="tel"
+                name="mobile"
+                id=""
+                placeholder="phone number"
+                required
+              />
+              <input
+                type="email"
+                className={styles.email}
+                name="mail"
+                id=""
+                placeholder="gmail"
+                required
+              />
               <input type="text" name="" id="" placeholder="service" />
               <textarea
                 id="message"
@@ -26,14 +63,16 @@ function Form({ handleHide,town }) {
                 placeholder="message (optional)"
               ></textarea>
               <label for="remember">
-                remeber me
                 <input
                   type="checkbox"
                   className={styles.check}
                   id="remember"
                   name="remember"
                   value="yes"
+                  autoComplete="email"
+                  required
                 />
+                remeber me
               </label>
             </div>
             <div className={styles.submit}>

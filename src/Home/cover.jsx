@@ -4,13 +4,15 @@ import { useState, useEffect, useRef } from "react";
 import Location from "./location";
 import Form from "../Entry/form";
 import background from "./background_image_data";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Cover() {
   const [showForm, setShowForm] = useState(false);
   const back_CoverRef = useRef(null);
-  const [text, setText] = useState(0);
   const courser_ref = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [lastindex, setn] = useState(0);
 
   useEffect(() => {
     const setB = () => {
@@ -22,7 +24,6 @@ function Cover() {
         void courser_ref.current.offsetWidth;
         courser_ref.current.classList.add(styles.slide_head);
         back_CoverRef.current.style.backgroundImage = `url(${background[number].image})`;
-        back_CoverRef.current.classList.add(styles.slideIn);
       }
     };
 
@@ -33,9 +34,12 @@ function Cover() {
   }, []);
 
   const get_randombackground = () => {
-    const index = Math.floor(Math.random() * background.length);
-    setText(index);
-    return index;
+    let new_index;
+    do {
+      new_index = Math.floor(Math.random() * background.length);
+    } while (new_index === lastindex);
+    setn(new_index);
+    return new_index;
   };
 
   const handleShowForm = () => {
@@ -44,6 +48,17 @@ function Cover() {
 
   const handleHide = () => {
     setShowForm(false);
+    toast.success("🦄 Wow so easy!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
 
   return (
@@ -57,7 +72,7 @@ function Cover() {
               <h2>Your Health, Our Priority </h2>
               <h3>
                 Connecting you with top healthcare professionals anytime,
-                anywhere.
+                anywhere
               </h3>
             </div>
           </div>
@@ -71,9 +86,7 @@ function Cover() {
             <h3>health blogs</h3>
             {isHovered && (
               <div className={styles.read_more}>
-                <p>
-                  read more 
-                </p>
+                <p>read more</p>
               </div>
             )}
           </div>
@@ -85,9 +98,7 @@ function Cover() {
             <h3>medical news</h3>
             {isHovered && (
               <div className={styles.read_more}>
-                <p>
-                  read more 
-                </p>
+                <p>read more</p>
               </div>
             )}
           </div>
@@ -99,22 +110,23 @@ function Cover() {
             <h3>stay healthy?</h3>
             {isHovered && (
               <div className={styles.read_more}>
-                <p>
-                  read more 
-                </p>
+                <p>read more</p>
               </div>
             )}
           </div>
         </div>
-        <div className={styles.cover_image} ref={back_CoverRef}>
-          <div className={styles.cover_headtext}>
-            <h1 className={styles.cover_heading} ref={courser_ref}>
-              {background[text].content}
-            </h1>
+        <div className={styles.cover_image}>
+          <div ref={back_CoverRef} className={styles.back_Cover}>
+            <div className={styles.cover_headtext}>
+              <h1 className={styles.cover_heading} ref={courser_ref}>
+                {background[lastindex].content}
+              </h1>
+            </div>
           </div>
         </div>
       </div>
       {showForm && <Form handleHide={handleHide} />}
+      <ToastContainer />
     </div>
   );
 }

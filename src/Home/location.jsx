@@ -1,10 +1,9 @@
 import React from "react";
 import styles from "./home.module.css";
 import { useState, useEffect } from "react";
-import Specalist from "./suggestions/doctor_suggest"
+import Specalist from "./suggestions/doctor_suggest";
 import SuggestionList from "./suggestion";
 import { FaLocationCrosshairs } from "react-icons/fa6";
-
 
 function Location({ location }) {
   const [town, setTown] = useState("");
@@ -18,8 +17,6 @@ function Location({ location }) {
   const handleChange = (e) => {
     setTown(e.target.value);
   };
-
-
 
   const handleDoc = (e) => {
     const value = e.target.value;
@@ -100,15 +97,17 @@ function Location({ location }) {
             onChange={handleDoc}
             className={styles.location_input}
             placeholder="specalist "
-            onFocus={() => setShowSuggestions(true)}
+            onClick={() => setShowSuggestions(true)}
             onBlur={handleBlur}
           />
-          {showSuggestions && (
-            <SuggestionList
-              suggestions={filteredSuggestions}
-              handleSuggestClick={handleSuggestClick}
-            />
-          )}
+          <div className={showSuggestions && doctors.length > 0 && styles.outer_sbox}>
+            {showSuggestions &&  doctors.length >0 && (
+              <SuggestionList
+                suggestions={filteredSuggestions}
+                handleSuggestClick={handleSuggestClick}
+              />
+            )}
+          </div>
           <p className={`${styles.error} ${doc_error && styles.view}`}>
             {doc_error}
           </p>

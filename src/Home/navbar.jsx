@@ -15,13 +15,11 @@ function Navbar() {
         <button>my health</button>
         <button>video consultation</button>
         <button>About us</button>
+        <button>help</button>
       </div>
       <div className={styles.login}>
         <button>login/signup</button>
-        <button>
-          help 
-        </button>
-        <button className={styles.lang}>DE</button>
+        <button className={styles.lang}>en</button>
       </div>
     </div>
   );
