@@ -1,4 +1,3 @@
-
 import Guestpage from "./guestpage";
 import { Routes, Route, Link } from "react-router-dom";
 import Login from "./login/login_page";
@@ -8,7 +7,7 @@ import Form from "./Entry/form";
 function App() {
   return (
     <>
-      <Routes>
+      <Routes basename="/HealthDoc_/">
         <Route path="/HealthDoc_/" element={<Guestpage />} />
         <Route path="/HealthDoc_/login" element={<Login />} />
         <Route path="/HealthDoc_/signup" element={<Signup />} />
