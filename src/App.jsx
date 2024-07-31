@@ -12,7 +12,7 @@ function App() {
         <Route path="/HealthDoc_/" element={<Guestpage />} />
         <Route path="/HealthDoc_/login" element={<Login />} />
         <Route path="/HealthDoc_/signup" element={<Signup />} />
-        <Route path="/HealthDoc_/doctor" element={<Doctor />} />
+        <Route path="/doctor" element={<Doctor />} />
         <Route path="/HealthDoc_/guest" element={<Form />} />
       </Routes>
     </>

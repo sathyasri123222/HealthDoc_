@@ -9,7 +9,7 @@ function Login() {
 
   useEffect(() => {
     bottom.current.style.borderBottom = "5px solid #023e8a";
-    bottom.current.style.borderRadius="0.2em"
+    bottom.current.style.borderRadius = "0.2em";
   }, []);
   return (
     <>
@@ -42,7 +42,7 @@ function Login() {
                   <div>
                     <Link className={styles.forgot}> forgot password?</Link>
                   </div>
-                  <Link to="/HealthDoc_/doctor" className={styles.linker}>
+                  <Link to="/doctor" className={styles.linker}>
                     <input
                       type="submit"
                       value="Login"
