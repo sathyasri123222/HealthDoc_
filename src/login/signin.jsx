@@ -3,7 +3,7 @@ import Navbar from "../Home/navbar";
 import styles from "./login.module.css";
 import { Link } from "react-router-dom";
 
-function Signin() {
+function Signup() {
   const bottom = useRef(null);
 
   useEffect(() => {
@@ -70,4 +70,4 @@ function Signin() {
   );
 }
 
-export default Signin;
+export default Signup;

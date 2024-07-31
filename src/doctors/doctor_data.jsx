@@ -1,8 +1,20 @@
+import React from "react";
+import img1 from "../assets/doc_1.jpg";
+import img2 from "../assets/doc_2.jpg";
+import img3 from "../assets/doc_3.jpg";
+import img4 from "../assets/doc_4.jpg";
+import img5 from "../assets/doc_5.jpg";
+import img6 from "../assets/doc_6.jpg";
+import img7 from "../assets/doc_7.jpg";
+import img8 from "../assets/doc_8.jpg";
+import img9 from "../assets/doc_9.jpg";
+import img0 from "../assets/doc_0.jpg";
+
 const Doc_data = [
   {
     name: "Dr. patrick Smith",
     spec: "Dentist",
-    img: "./assets/doc_9.jpg",
+    img: img9,
     adress: "Noida,mumbai",
     consultation_fee: 200,
     rating: 4.5,
@@ -12,7 +24,7 @@ const Doc_data = [
   {
     name: "Dr. Jane white",
     spec: "Dermatologist",
-    img: "./assets/doc_7.jpg",
+    img: img7,
     adress: "vizag,AP",
     consultation_fee: "500",
     rating: 4.1,
@@ -23,7 +35,7 @@ const Doc_data = [
   {
     name: "Dr. brook henry",
     spec: "Dentist",
-    img: "./assets/doc_1.jpg",
+    img: img1,
     adress: "Noida",
     consultation_fee: "180",
     rating: 4.2,
@@ -33,7 +45,7 @@ const Doc_data = [
   {
     name: "Dr. Emily Johnson",
     spec: "Pediatrician",
-    img: "./assets/doc_6.jpg",
+    img: img6,
     address: "Delhi",
     consultation_fee: "700",
     rating: 4.7,
@@ -43,7 +55,7 @@ const Doc_data = [
   {
     name: "Dr. Michael Brown",
     spec: "Cardiologist",
-    img: "./assets/doc_5.jpg",
+    img: img5,
     address: "Gurgaon",
     consultation_fee: "200",
     rating: 4.9,
@@ -53,7 +65,7 @@ const Doc_data = [
   {
     name: "Dr. Sarah Lee",
     spec: "Gynecologist",
-    img: "./assets/doc_4.jpg",
+    img: img4,
     address: "Faridabad",
     consultation_fee: "900",
     rating: 4.6,
@@ -63,7 +75,7 @@ const Doc_data = [
   {
     name: "Dr. David Wilson",
     spec: "Orthopedic Surgeon",
-    img: "./assets/doc_3.jpg",
+    img: img3,
     address: "Noida",
     consultation_fee: "500",
     rating: 4.9,
@@ -73,7 +85,7 @@ const Doc_data = [
   {
     name: "Dr. Olivia Martinez",
     spec: "Neurologist",
-    img: "./assets/doc_0.jpg",
+    img: img0,
     address: "Delhi",
     consultation_fee: "300",
     rating: 4.4,
@@ -83,7 +95,7 @@ const Doc_data = [
   {
     name: "Dr.patrick reed",
     spec: "Endocrinologist",
-    img: "./assets/doc_2.jpg",
+    img: img2,
     address: "Gurgaon",
     consultation_fee: "400",
     rating: 4.3,
@@ -93,7 +105,7 @@ const Doc_data = [
   {
     name: "Dr. Sophia Anderson",
     spec: "Ophthalmologist",
-    img: "./assets/doc_8.jpg",
+    img: img8,
     address: "Noida",
     consultation_fee: "950",
     rating: 4.6,
@@ -103,7 +115,7 @@ const Doc_data = [
   {
     name: "Dr. Daniel Thompson",
     spec: "Pulmonologist",
-    img: "./assets/doc_1.jpg",
+    img: img1,
     address: "Delhi",
     consultation_fee: "1000",
     rating: 4.5,
@@ -113,7 +125,7 @@ const Doc_data = [
   {
     name: "Dr. Isabella Taylor",
     spec: "Rheumatologist",
-    img: "./assets/doc_7.jpg",
+    img: img7,
     address: "Gurgaon",
     consultation_fee: "800",
     rating: 4.7,
@@ -123,7 +135,7 @@ const Doc_data = [
   {
     name: "Dr. Lucas Harris",
     spec: "Hematologist",
-    img: "./assets/doc_9.jpg",
+    img: img9,
     address: "Faridabad",
     consultation_fee: "950",
     rating: 4.8,
@@ -132,7 +144,7 @@ const Doc_data = [
   {
     name: "Dr. Mia Clark",
     spec: "Allergist",
-    img: "./assets/doc_6.jpg",
+    img: img6,
     address: "Delhi",
     consultation_fee: "850",
     rating: 4.4,
@@ -142,7 +154,7 @@ const Doc_data = [
   {
     name: "Dr. Ethan Robinson",
     spec: "Plastic Surgeon",
-    img: "./assets/doc_5.jpg",
+    img: img6,
     address: "Gurgaon",
     consultation_fee: "1500",
     rating: 4.9,
@@ -151,7 +163,7 @@ const Doc_data = [
   {
     name: "Dr. Ava Martinez",
     spec: "Urologist",
-    img: "./assets/doc_4.jpg",
+    img: img4,
     address: "Noida",
     consultation_fee: "950",
     rating: 4.6,
@@ -161,7 +173,7 @@ const Doc_data = [
   {
     name: "Dr. Benjamin Wilson",
     spec: "Endocrinologist",
-    img: "./assets/doc_3.jpg",
+    img: img3,
     address: "Delhi",
     consultation_fee: "800",
     rating: 4.3,
@@ -171,7 +183,7 @@ const Doc_data = [
   {
     name: "Dr. Harper Evans",
     spec: "Gastroenterologist",
-    img: "./assets/doc_0.jpg",
+    img: img0,
     address: "Faridabad",
     consultation_fee: "1100",
     rating: 4.7,
@@ -180,7 +192,7 @@ const Doc_data = [
   {
     name: "Dr. Ella White",
     spec: "Nephrologist",
-    img: "./assets/doc_2.jpg",
+    img: img2,
     address: "Delhi",
     consultation_fee: "1050",
     rating: 4.5,
@@ -190,7 +202,7 @@ const Doc_data = [
   {
     name: "Dr. Jacob King",
     spec: "Oncologist",
-    img: "./assets/doc_8.jpg",
+    img: img8,
     address: "Gurgaon",
     consultation_fee: "1300",
     rating: 4.9,
@@ -200,7 +212,7 @@ const Doc_data = [
   {
     name: "Dr. Amelia Scott",
     spec: "Psychiatrist",
-    img: "./assets/doc_1.jpg",
+    img: img1,
     address: "Noida",
     consultation_fee: "1200",
     rating: 4.6,
@@ -210,7 +222,7 @@ const Doc_data = [
   {
     name: "Dr. Olivia Green",
     spec: "Pulmonologist",
-    img: "./assets/doc_7.jpg",
+    img: img7,
     address: "Delhi",
     consultation_fee: "950",
     rating: 4.4,

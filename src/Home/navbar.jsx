@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./home.module.css";
 import { Link } from "react-router-dom";
-import img from "/assets/seth.jpg";
+import img from "../assets/seth.jpg";
 
 function Navbar() {
   return (
