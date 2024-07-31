@@ -1,11 +1,25 @@
 import React from "react";
 import styles from "./form.module.css";
-function Form({ handleHide}) {
+import Navbar from "../Home/navbar";
+import { Link, useNavigate } from "react-router-dom";
+function Form() {
+  const navigate = useNavigate();
+
+  function handlelog(event) {
+    event.preventDefault();
+
+    if (event.target.checkValidity()) {
+      navigate("/HealthDoc_/signup");
+    } else {
+      event.target.reportValidity();
+    }
+  }
   return (
     <>
+      <Navbar />
       <div className={styles.form}>
         <div className={styles.entry}>
-          <div className={styles.box}>
+          <form className={styles.box} onSubmit={handlelog}>
             <div className={styles.head}>
               <h1>Details Form</h1>
             </div>
@@ -70,7 +84,6 @@ function Form({ handleHide}) {
                   name="remember"
                   value="yes"
                   autoComplete="email"
-                  required
                 />
                 remeber me
               </label>
@@ -84,9 +97,10 @@ function Form({ handleHide}) {
                   </span>
                 </p>
               </div>
-              <button onClick={handleHide}>submit</button>
+
+              <input type="submit" className={styles.submit_btn} />
             </div>
-          </div>
+          </form>
           <div className={styles.caption}>
             <h1>relax!! we will reach you</h1>
           </div>

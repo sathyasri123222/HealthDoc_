@@ -6,9 +6,9 @@ import Form from "../Entry/form";
 import background from "./background_image_data";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link, useNavigate } from "react-router-dom";
 
 function Cover() {
-  const [showForm, setShowForm] = useState(false);
   const back_CoverRef = useRef(null);
   const courser_ref = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -42,30 +42,12 @@ function Cover() {
     return new_index;
   };
 
-  const handleShowForm = () => {
-    setShowForm(true);
-  };
-
-  const handleHide = () => {
-    setShowForm(false);
-    toast.success("🦄 Wow so easy!", {
-      position: "top-center",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Bounce,
-    });
-  };
 
   return (
     <div>
       <div className={styles.cover}>
         <div className={styles.cover_text}>
-          <Location location={handleShowForm} />
+          <Location/>
           <div className={styles.coverContent}>
             <div className={styles.healthTime}>
               <h1>WELCOME TO Health Time</h1>
@@ -125,8 +107,6 @@ function Cover() {
           </div>
         </div>
       </div>
-      {showForm && <Form handleHide={handleHide} />}
-      <ToastContainer />
     </div>
   );
 }

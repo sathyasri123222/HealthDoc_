@@ -1,0 +1,141 @@
+.one_doc_box {
+  font-size: 1rem;
+  display: flex;
+  align-items: space-between;
+  justify-content: space-evenly;
+  width: 55%;
+  padding: 0.5em 0;
+  margin: 0.2em 0;
+}
+
+.doc_box {
+  width: 70%;
+}
+
+.doctorsList {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.appointment {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+  border-bottom: 3px solid #023e8a;
+  margin: 1em 0.2em;
+}
+
+.filterbar {
+  border: 2px solid #023e8a;
+  text-transform: capitalize;
+  padding: 1em 1em;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-style: italic;
+  background-color: white;
+}
+
+.filterbar p {
+  display: flex;
+  align-items: center;
+}
+
+.filterbox {
+  width: 25%;
+  border: 2px solid white;
+  background-color: #023e8a;
+}
+
+.doc_info .doc_name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.doc_info {
+  width: 60%;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 0 0.5em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.doc_spec {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.doc_exp {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5em;
+  font-weight: 700;
+  background-color: green;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 0.2em;
+}
+
+.appointment_doc {
+  width: 41%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding: 1em 0;
+  box-sizing: border-box;
+}
+
+.appointment_doc button {
+  font-size: 1.1rem;
+  padding: 0.5em 1em;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: capitalize;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: #023e8a;
+  color: white;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+.appointment_doc .videocall {
+  background-color: #611e9e;
+}
+
+.appointment_doc button:hover {
+  background-color: white;
+  color: #023e8a;
+  border: 1px solid #023e8a;
+}
+
+.doc_img img {
+  width: 100%;
+  height: 13em;
+  border-radius: 5em;
+}
+
+.doc_verified {
+  color: green;
+  font-size: 1.5rem;
+  margin: 0 0.1em;
+}
+
+.doc_img {
+  width: 25%;
+}

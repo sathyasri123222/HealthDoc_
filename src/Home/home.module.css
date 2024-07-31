@@ -15,10 +15,23 @@
   box-shadow: 0px 1px 3px 1px #999999;
   justify-content: space-around;
   display: flex;
-  position: fixed;
   z-index: 2;
   background-color: white;
   font-size: 1.25rem;
+}
+
+.login_navbar {
+  width: 100%;
+  height: 5em;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 3px 1px #999999;
+  justify-content: space-around;
+  display: flex;
+  z-index: 2;
+  background-color: #023e8a;
+  font-size: 1.25rem;
+  color: white;
 }
 
 .logo {
@@ -39,6 +52,13 @@
   justify-content: space-evenly;
 }
 
+.login_service {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .service button {
   border: none;
   background: none;
@@ -48,21 +68,39 @@
   cursor: pointer;
   font-weight: 600;
 }
+.login_service button {
+  border: none;
+  background: none;
+  font-weight: 450;
+  font-size: 1.15rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.login_service button {
+  color: white;
+}
 
 .service button:hover {
   color: #023e8a;
   text-decoration: underline;
 }
 
-.login {
-  width: 10%;
+.login_service button:hover {
+  text-decoration: underline;
+}
+
+.login,
+.profile_Block {
+  width: 12%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-transform: capitalize;
 }
 
-.login button {
+.login a {
   border: 1px solid #0077b6;
   color: black;
   background: none;
@@ -74,11 +112,30 @@
   align-items: center;
   box-sizing: border-box;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.login button:hover {
+.profile_Block a {
+  color: white;
+  background: none;
+  font-weight: 500;
+  font-size: 1.15rem;
+  text-transform: capitalize;
+  padding: 0.3em;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login a:hover {
   background: #023e8a;
   color: white;
+}
+
+.profile_Block a:hover {
+  scale: 1.15;
 }
 
 .login .lang {
@@ -103,8 +160,7 @@
 
 .cover {
   width: 100%;
-  height: 85vh;
-  padding-top: 4.5em;
+  height: 90vh;
   background-color: #023e8a;
   display: flex;
   box-sizing: border-box;

@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "./home.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Specalist from "./suggestions/doctor_suggest";
 import SuggestionList from "./suggestion";
 import { FaLocationCrosshairs } from "react-icons/fa6";
+import { Link, useNavigate } from "react-router-dom";
+import Form from "../Entry/form";
 
-function Location({ location }) {
+function Location() {
   const [town, setTown] = useState("");
   const [error, setError] = useState(null);
   const [doc_error, setDoc_error] = useState(null);
@@ -13,6 +15,9 @@ function Location({ location }) {
   const [Doc_spec] = useState(Specalist);
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [login, setLogin] = useState(false);
+  const search_ref = useRef(null);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setTown(e.target.value);
@@ -61,7 +66,11 @@ function Location({ location }) {
     }
 
     if (!hasError) {
-      location();
+      if (login === false) {
+        navigate("/HealthDoc_/guest");
+      } else {
+        navigate("/HealthDoc_/doctors");
+      }
     } else {
       setTimeout(() => {
         setError(null);
@@ -100,8 +109,12 @@ function Location({ location }) {
             onClick={() => setShowSuggestions(true)}
             onBlur={handleBlur}
           />
-          <div className={showSuggestions && doctors.length > 0 && styles.outer_sbox}>
-            {showSuggestions &&  doctors.length >0 && (
+          <div
+            className={
+              showSuggestions && doctors.length > 0 && styles.outer_sbox
+            }
+          >
+            {showSuggestions && doctors.length > 0 && (
               <SuggestionList
                 suggestions={filteredSuggestions}
                 handleSuggestClick={handleSuggestClick}
@@ -112,7 +125,11 @@ function Location({ location }) {
             {doc_error}
           </p>
         </div>
-        <button onClick={handleSearch} className={styles.l_button}>
+        <button
+          onClick={handleSearch}
+          className={styles.l_button}
+          ref={search_ref}
+        >
           search
         </button>
       </div>
