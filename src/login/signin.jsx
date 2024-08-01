@@ -6,6 +6,17 @@ import { Link } from "react-router-dom";
 function Signup() {
   const bottom = useRef(null);
 
+
+  function handlelog(event) {
+    event.preventDefault();
+
+    if (event.target.checkValidity()) {
+      navigate("/HealthDoc_/signup");
+    } else {
+      event.target.reportValidity();
+    }
+  }
+
   useEffect(() => {
     bottom.current.style.borderBottom = "4px solid #023e8a";
     bottom.current.style.borderRadius = "0.2em";
@@ -25,7 +36,7 @@ function Signup() {
                 </Link>
               </div>
               <div className={styles.inputform}>
-                <form action="" className={styles.form}>
+                <form action="" className={styles.form} onSubmit={handlelog}>
                   <div className={styles.userbox}>
                     <label htmlFor="username">full name</label>
                     <input

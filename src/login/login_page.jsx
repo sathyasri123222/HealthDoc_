@@ -11,6 +11,17 @@ function Login() {
     bottom.current.style.borderBottom = "5px solid #023e8a";
     bottom.current.style.borderRadius = "0.2em";
   }, []);
+
+
+  function handlelog(event) {
+    event.preventDefault();
+
+    if (event.target.checkValidity()) {
+      navigate("/HealthDoc_/signup");
+    } else {
+      event.target.reportValidity();
+    }
+  }
   return (
     <>
       <Navbar />
@@ -26,7 +37,7 @@ function Login() {
                 <Link to="/HealthDoc_/signup">Signup</Link>
               </div>
               <div className={styles.inputform}>
-                <form action="" className={styles.form}>
+                <form action="" className={styles.form} onSubmit={handlelog}>
                   <div className={styles.userbox}>
                     <label htmlFor="username">Username</label>
                     <input type="text" placeholder="username" required />
