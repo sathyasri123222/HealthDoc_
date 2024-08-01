@@ -42,7 +42,7 @@ function Login() {
                   <div>
                     <Link className={styles.forgot}> forgot password?</Link>
                   </div>
-                  <Link to="/doctor" className={styles.linker}>
+                  <Link to="/HealthDoc_/doctor" className={styles.linker}>
                     <input
                       type="submit"
                       value="Login"
