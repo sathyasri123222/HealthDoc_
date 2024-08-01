@@ -29,11 +29,11 @@ function Login() {
                 <form action="" className={styles.form}>
                   <div className={styles.userbox}>
                     <label htmlFor="username">Username</label>
-                    <input type="text" placeholder="username" />
+                    <input type="text" placeholder="username" required />
                   </div>
                   <div className={styles.userbox}>
                     <label htmlFor="password">Password</label>
-                    <input type="password" placeholder="password" />
+                    <input type="password" placeholder="password" required />
                   </div>
                   <div className={styles.remember}>
                     <input type="checkbox" id="remember" />
