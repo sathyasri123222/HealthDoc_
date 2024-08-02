@@ -47,7 +47,7 @@ function Cover() {
     <div>
       <div className={styles.cover}>
         <div className={styles.cover_text}>
-          <Location/>
+          <Location />
           <div className={styles.coverContent}>
             <div className={styles.healthTime}>
               <h1>WELCOME TO Health Time</h1>
@@ -56,6 +56,16 @@ function Cover() {
                 Connecting you with top healthcare professionals anytime,
                 anywhere
               </h3>
+              <div className={styles.whyus}>
+                <h1>why us?</h1>
+                <ul className={styles.whyus_list}>
+                  <li>Wide Range of Specialists</li>
+                  <li>24/7 service round the clock</li>
+                  <li>emergency patient support</li>
+                  <li>100% Confidentiality in medical reports</li>
+                  <li> Efficient Follow-Up</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

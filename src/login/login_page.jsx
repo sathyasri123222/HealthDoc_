@@ -40,7 +40,7 @@ function Login() {
                 <form action="" className={styles.form} onSubmit={handlelog}>
                   <div className={styles.userbox}>
                     <label htmlFor="username">Username</label>
-                    <input type="text" placeholder="username" required />
+                    <input type="text" placeholder="username" required  autoComplete="off"/>
                   </div>
                   <div className={styles.userbox}>
                     <label htmlFor="password">Password</label>
@@ -53,13 +53,11 @@ function Login() {
                   <div>
                     <Link className={styles.forgot}> forgot password?</Link>
                   </div>
-                  <Link to="/HealthDoc_/doctor" className={styles.linker}>
                     <input
                       type="submit"
                       value="Login"
                       className={styles.loginbtn}
                     />
-                  </Link>
                 </form>
               </div>
             </div>

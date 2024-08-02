@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 function Signup() {
   const bottom = useRef(null);
 
-
   function handlelog(event) {
     event.preventDefault();
 
@@ -43,6 +42,7 @@ function Signup() {
                       type="text"
                       placeholder="username"
                       id="username"
+                      autoComplete="username"
                       required
                     />
                   </div>
@@ -52,6 +52,7 @@ function Signup() {
                       type="email"
                       placeholder="email"
                       id="email"
+                      autoComplete="email"
                       required
                     />
                   </div>
@@ -64,13 +65,11 @@ function Signup() {
                       required
                     />
                   </div>
-                  <Link to="/HealthDoc_/doctor" className={styles.linker}>
-                    <input
-                      type="submit"
-                      value="get otp"
-                      className={styles.loginbtn}
-                    />
-                  </Link>
+                  <input
+                    type="submit"
+                    value="get otp"
+                    className={styles.loginbtn}
+                  />
                 </form>
               </div>
             </div>

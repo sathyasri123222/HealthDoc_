@@ -67,7 +67,7 @@ function Location() {
 
     if (!hasError) {
       if (login === false) {
-        navigate("/HealthDoc_/guest");
+        navigate("/HealthDoc_/guest_Form");
       } else {
         navigate("/HealthDoc_/doctors");
       }

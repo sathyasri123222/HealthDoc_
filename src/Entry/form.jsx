@@ -9,13 +9,13 @@ function Form() {
     event.preventDefault();
 
     if (event.target.checkValidity()) {
-      navigate("/HealthDoc_/signup");
+      navigate("/HealthDoc_/guest_vist");
     } else {
       event.target.reportValidity();
     }
   }
   return (
-    <>
+    <div className={styles.body}>
       <Navbar />
       <div className={styles.form}>
         <div className={styles.entry}>
@@ -97,7 +97,6 @@ function Form() {
                   </span>
                 </p>
               </div>
-
               <input type="submit" className={styles.submit_btn} />
             </div>
           </form>
@@ -106,7 +105,7 @@ function Form() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

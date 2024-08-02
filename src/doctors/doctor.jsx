@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Navbar from "../Home/navbar";
 import styles from "./doc.module.css";
-import Log_navbar from "../Home/log_nav";
 import { Link } from "react-router-dom";
 import Doc_data from "./doctor_data";
 import { useState } from "react";
@@ -18,7 +17,6 @@ function Doctor() {
   }, []);
   return (
     <div>
-      <Log_navbar />
       <div className={styles.filterbar}>
         <h2>{T_data.length} doctors avaliable in your locality</h2>
         <p>

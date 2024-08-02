@@ -15,6 +15,7 @@ function Log_navbar() {
         <button>video consultation</button>
         <button>medicines</button>
         <button>lab tests</button>
+        <button>my health</button>
         <button>doctor chat</button>
         <button>surgeries</button>
       </div>
