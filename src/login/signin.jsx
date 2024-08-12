@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import Navbar from "../Home/navbar";
 import styles from "./login.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Signup() {
-  const bottom = useRef(null);
 
   function handlelog(event) {
     event.preventDefault();
@@ -16,23 +15,18 @@ function Signup() {
     }
   }
 
-  useEffect(() => {
-    bottom.current.style.borderBottom = "4px solid #023e8a";
-    bottom.current.style.borderRadius = "0.2em";
-  }, []);
   return (
     <>
-      <Navbar />
       <div className={styles.login_container}>
         <div className={styles.login}>
           <div className={styles.image}></div>
           <div className={styles.regform}>
             <div className={styles.l_form}>
               <div className={styles.signup}>
-                <Link to="/HealthDoc_/login">Login</Link>
-                <Link to="/HealthDoc_/signup" ref={bottom}>
+                <NavLink to="/HealthDoc_/login" className={({ isActive }) => (isActive ? styles.active : "")}>Login</NavLink>
+                <NavLink to="/HealthDoc_/signup" className={({ isActive }) => (isActive ? styles.active : "")}>
                   Signup
-                </Link>
+                </NavLink>
               </div>
               <div className={styles.inputform}>
                 <form action="" className={styles.form} onSubmit={handlelog}>

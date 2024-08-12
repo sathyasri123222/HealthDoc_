@@ -76,6 +76,13 @@ body {
   align-items: center;
 }
 
+
+.active{
+  border-bottom:5px solid #023e8a; 
+  border-radius: 0.2em;
+  display: inline-block;
+}
+
 .signup a {
   font-size: 1rem;
   padding: 0.5em 1em;
@@ -83,12 +90,9 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 600;
   text-transform: capitalize;
-  border: none;
-  border: 1px solid white;
   cursor: pointer;
   background-color: white;
   color: #023e8a;
-  display: block;
   text-decoration: none;
 }
 

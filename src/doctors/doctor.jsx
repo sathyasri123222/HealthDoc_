@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "../Home/navbar";
 import styles from "./doc.module.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Doc_data from "./doctor_data";
 import { useState } from "react";
 import { MdOutlineStar } from "react-icons/md";
@@ -12,9 +12,7 @@ import { FaVideo } from "react-icons/fa6";
 function Doctor() {
   const [T_data, setT] = useState(Doc_data);
 
-  useEffect(() => {
-   
-  }, []);
+  useEffect(() => {}, []);
   return (
     <div>
       <div className={styles.filterbar}>
@@ -30,7 +28,7 @@ function Doctor() {
             return (
               <>
                 <div className={styles.appointment}>
-                  <div className={styles.one_doc_box}>
+                  <div key={index} className={styles.one_doc_box}>
                     <div className={styles.doc_img}>
                       <img src={doc.img} alt="" />
                     </div>
@@ -45,7 +43,7 @@ function Doctor() {
                       <p className={styles.doc_ex}>
                         {doc.experience} of experience
                       </p>
-                      <p className={styles.doc_adress}>{doc.adress}</p>
+                      <p className={styles.doc_adress}>{doc.address}</p>
                       <p className={styles.doc_consultation_fee}>
                         <FaRupeeSign />
                         {doc.consultation_fee} consultation fee at clinic
@@ -57,18 +55,22 @@ function Doctor() {
                     </div>
                   </div>
                   <div className={styles.appointment_doc}>
-                    <Link to="/bookappointment">
-                      <button>Book Appointment</button>
-                    </Link>
-                    <Link to="/bookappointment">
-                      <button className={styles.videocall}>
-                        video call <FaVideo />
-                      </button>
-                    </Link>
-
-                    <Link to="/profile">
-                      <button>View profile</button>
-                    </Link>
+                    <NavLink
+                      to={`/HealthDoc_/doctor/bookappointment/${doc.id}`}
+                      className={({ isActive }) =>
+                        isActive ? styles.active : ""
+                      }
+                    >
+                      bookappointment
+                    </NavLink>
+                    <NavLink
+                      to={`/HealthDoc_/doctor/bookappointment/${doc.id}`}
+                      className={({ isActive }) =>
+                        isActive ? styles.active : ""
+                      }
+                    >
+                      view profile
+                    </NavLink>
                   </div>
                 </div>
               </>
