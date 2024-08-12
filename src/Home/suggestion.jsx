@@ -7,6 +7,10 @@ const SuggestionList = ({ suggestions, handleSuggestClick }) => {
   }
 
   const s_list = suggestions.map((suggestion, index) => {
+
+
+
+    
     return (
       <li
         className={styles.suggestion}
