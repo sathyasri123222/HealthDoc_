@@ -6,7 +6,9 @@ import img2 from "../assets/lab_test.jpg";
 import img3 from "../assets/pharmacy.jpg";
 import img4 from "../assets/second_opinion.png";
 import img from "../assets/video_consultation.png";
-
+import HealthConcernsCarousel from "./HealthConcernsCarousel";
+import TestimonialsCarousel from "./Testimonials";
+import FooterPage from "./footer";
 function Cover() {
   const carouselRef = useRef(null);
   const [index, setIndex] = useState(0);
@@ -69,7 +71,12 @@ function Cover() {
           <button className={styles.videoVisit_button}>Get Care Now</button>
         </div>
       </div>
+      {/* Use the new HealthConcernsCarousel component */}
+      <HealthConcernsCarousel />
+      <TestimonialsCarousel />
+      <FooterPage />
     </div>
+    
   );
 }
 

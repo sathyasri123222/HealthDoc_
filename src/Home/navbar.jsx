@@ -47,6 +47,8 @@ const Navbar = () => {
           offers <VscPercentage />
         </button>
         <button>video consultation</button>
+        <button>Health Plans</button>
+
         <button>About us</button>
         <button>
           help <BsFillPatchQuestionFill />

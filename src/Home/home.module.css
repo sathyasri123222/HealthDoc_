@@ -564,6 +564,7 @@
   justify-content: center;
   padding: 2em;
   background-color: #fff;
+  margin-top: 100px;
 }
 
 .videoVisit img {
@@ -620,7 +621,7 @@
 }
 
 .carouselContainer {
-  width: 100vw; /* Full viewport width */
+  width: 100vw; 
   overflow: hidden;
   margin: 0 auto;
   position: relative;
@@ -628,21 +629,21 @@
 
 .carousel {
   display: flex;
-  transition: transform 1.5s ease-in-out; /* Smooth transition */
-  width: calc(100vw * 5); /* Adjust width according to the number of images + 1 for the duplicate */
+  transition: transform 1.5s ease-in-out; 
+  width: calc(100vw * 5); 
 }
 
 .carouselImageWrapper {
   flex-shrink: 0;
-  width: 100vw; /* Each image takes full width of the viewport */
-  height: 667px; /* Ensure this matches the desired image height */
+  width: 100vw; 
+  height: 667px; 
   position: relative;
 }
 
 .carouselImage {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cover the container without distorting the image */
+  object-fit: cover; 
 }
 
 .carouselTitle {
@@ -652,5 +653,85 @@
   font-size: 24px;
   font-weight: bold;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better visibility */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
+.concernsSection {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 100px;
+}
+
+.concernsSection h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center; 
+}
+
+.concernsSection p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.concernsCarousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.concernItem {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  flex: 0 0 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.concernItem img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.concernItem h3 {
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+.concernItem p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.concernItem a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.concernItem a:hover {
+  text-decoration: underline;
+}
+
+.seeAllSymptoms {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.seeAllSymptoms:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
