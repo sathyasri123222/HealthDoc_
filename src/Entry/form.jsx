@@ -16,7 +16,6 @@ function Form() {
   }
   return (
     <div className={styles.body}>
-      <Navbar />
       <div className={styles.form}>
         <div className={styles.entry}>
           <form className={styles.box} onSubmit={handlelog}>

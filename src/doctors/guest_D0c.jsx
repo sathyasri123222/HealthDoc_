@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 function Guestdoc() {
     return (
         <div>
-            <Navbar />
             <Doctor />
         </div>
     );

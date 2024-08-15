@@ -10,6 +10,7 @@
 
 .doc_box {
   width: 70%;
+  display: block;
 }
 
 .doctorsList {
@@ -51,17 +52,33 @@
   border: 2px solid white;
   background-color: #023e8a;
 }
-
 .doc_info .doc_name {
   font-size: 1.25rem;
   font-weight: 600;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: inline-block;
 }
+
+.doc_info .doc_adress {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.doc_info .doc_consultation_fee {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+
 .doc_info {
   width: 60%;
   font-size: 1.1rem;
-  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: baseline;
@@ -70,15 +87,17 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-transform: capitalize;
   font-weight: 400;
+  text-decoration: none;
+  display: inline-flex;
 }
 
-.doc_spec {
+ .doc_spec {
   display: flex;
   align-items: center;
   font-weight: 600;
 }
 
-.doc_exp {
+ .doc_exp {
   display: flex;
   align-items: center;
   padding: 0 0.5em;
@@ -99,7 +118,7 @@
   box-sizing: border-box;
 }
 
-.appointment_doc button {
+.appointment_doc a {
   font-size: 1.1rem;
   padding: 0.5em 1em;
   font-weight: 600;
@@ -107,18 +126,14 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-transform: capitalize;
   border: 1px solid white;
-  cursor: pointer;
   background-color: #023e8a;
   color: white;
   border-radius: 0.3em;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
-
-.appointment_doc .videocall {
-  background-color: #611e9e;
-}
-
-.appointment_doc button:hover {
+.appointment_doc a:hover {
   background-color: white;
   color: #023e8a;
   border: 1px solid #023e8a;
