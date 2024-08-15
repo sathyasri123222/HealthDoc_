@@ -422,12 +422,12 @@
   overflow: hidden;
   text-transform: capitalize;
   background: transparent;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #0077b6;
+  color: black;
 }
 
 .location_input::placeholder {
-  color: white;
+  color: black;
 }
 
 .suggestion_box {
@@ -491,7 +491,7 @@
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: white;
+  color: black;
   padding: 0.5em 0.1em;
 }
 
@@ -516,3 +516,228 @@
 .view {
   display: block;
 }
+
+.arrowDown, .arrowUp {
+  margin-left: 5px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.arrowDown {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.arrowUp {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.dropdownContainer {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%; /* Ensure the dropdown appears below the button */
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 10px;
+  width: max-content;
+}
+
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background-color: #f1f1f1;
+}
+.videoVisit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  background-color: #fff;
+  margin-top: 100px;
+}
+
+.videoVisit img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.videoVisit_content {
+  margin-left: 2em;
+}
+
+.videoVisit_content h2 {
+  font-size: 2em;
+  margin: 0.5em 0;
+}
+
+.videoVisit_content h3 {
+  font-size: 1.5em;
+  color: #666;
+}
+
+.videoVisit_content p {
+  font-size: 1em;
+  color: #666;
+  margin: 1em 0;
+}
+
+.videoVisit_button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.videoVisit_button:hover {
+  background-color: #0056b3;
+}
+
+.imageScroller {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 20px;
+}
+
+.scrollingImage {
+  width: 25%;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.carouselContainer {
+  width: 100vw; 
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 1.5s ease-in-out; 
+  width: calc(100vw * 5); 
+}
+
+.carouselImageWrapper {
+  flex-shrink: 0;
+  width: 100vw; 
+  height: 667px; 
+  position: relative;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.carouselTitle {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+.concernsSection {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 100px;
+}
+
+.concernsSection h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center; 
+}
+
+.concernsSection p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.concernsCarousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.concernItem {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  flex: 0 0 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.concernItem img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.concernItem h3 {
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+.concernItem p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.concernItem a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.concernItem a:hover {
+  text-decoration: underline;
+}
+
+.seeAllSymptoms {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.seeAllSymptoms:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
