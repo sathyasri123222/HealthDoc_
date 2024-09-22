@@ -14,15 +14,20 @@
 .profile_imgbox {
   width: 50%;
   display: flex;
-  justify-content: center;
-  align-items: first baseline;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  flex-direction: column;
 }
 
 .profile_imgbox .image {
   width: 100%;
   display: flex;
-  border: 3px solid green;
+  border: 2px solid #023e8a;
   height: 25em;
+  -webkit-box-shadow: -4px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -4px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .profile_imgbox .image img {
@@ -70,6 +75,30 @@
   text-align: center;
 }
 
+.doctorsnote {
+  border: 3px solid #023e8a;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 1em 0.5em;
+  font-size: 1.15rem;
+  font-weight: 500;
+  border-top-left-radius: 1em;
+  padding: 1em;
+  background-color: #023e8a;
+  color: white;
+}
+
+.doctorsnote p {
+  width: 100%;
+}
+
+.doctorsnote h3{
+  background-color: #e6e6e6;
+  color: #023e8a;
+}
+
 .profile_imgbox {
   padding: 1em;
   width: 45%;
@@ -85,7 +114,7 @@
   display: flex;
   justify-content: center;
   height: 100vh;
-  border:2px solid black;
+  border: 2px solid black;
 }
 
 .divcalendar {
@@ -302,7 +331,7 @@
   font-weight: 600;
   justify-content: center;
   box-sizing: border-box;
-  border-right:2px solid black;
+  border-right: 2px solid black;
 }
 
 .afternoon,
@@ -312,7 +341,7 @@
   height: 32%;
   display: flex;
   align-items: center;
-  border:2px solid black;
+  border: 2px solid black;
 }
 
 .time {
@@ -364,4 +393,54 @@
   background-color: #023e8a;
   color: white;
   transition: 0.2s;
+}
+
+/*reviwes table*/
+
+.reviews_table {
+  width: 100%;
+  height: 100%;
+  background-color: #e6e6e6;
+  overflow-y: scroll;
+}
+
+.one_rev {
+  display: flex;
+  padding: 1em 1em;
+  width: 100%;
+  justify-content: space-around;
+  height: 23%;
+  border-bottom: 1px solid #023e8a;
+}
+
+.one_rev .informate_rev {
+  width: 70%;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.one_rev .informate_rev h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #023e8a;
+}
+
+.one_rev .informate_rev p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.one_rev .img_rev {
+  width: 25%;
+  border-right: 3px solid #023e8a;
+}
+
+.img_rev img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1.2em;
 }

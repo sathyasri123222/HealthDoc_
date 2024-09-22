@@ -1,0 +1,587 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 55%;
+  height: 105vh;
+  display: flex;
+  margin: auto;
+  box-sizing: border-box;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border: 2px solid #023e8a;
+}
+
+.container a {
+  text-transform: capitalize;
+  color: #023e8a;
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+h4 {
+  color: #023e8a;
+  font-size: 1.1rem;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #023e8a;
+  box-sizing: border-box;
+  background-color: white;
+  justify-content: center;
+  background-color: #f2f2f2;
+  text-transform: capitalize;
+  padding: 0 0.3em;
+}
+
+.right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+.left .profile {
+  width: 100%;
+  height: 23%;
+  display: flex;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 0.8em;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.left .profile .profile_info {
+  width: 70%;
+  height: 100%;
+  border: 2px solid #023e8a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0 1em;
+}
+
+.left .image {
+  height: 100%;
+  width: 30%;
+  border: 3px solid rgb(13, 0, 128);
+  border-left: none;
+}
+
+.left .profile .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.left .hospital {
+  display: flex;
+  width: 100%;
+  height: 23%;
+  border: 3px solid #023e8a;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.left .hospital .h_icon {
+  width: 30%;
+  height: 100%;
+  border: 3px solid rgb(12, 61, 165);
+  border-left: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left .hospital .h_icon p {
+  font-size: 5rem;
+  color: #023e8a;
+}
+
+.left .hospital .adress {
+  width: 70%;
+  height: 100%;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.right .cont {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 0.5em;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.right .cont .patient {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  padding: 0.5em 0;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.right .cont .patient label {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 0.3em;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 95%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  column-gap: 0.2em;
+  background-color: white;
+  border-radius: 0.3em;
+  margin: 0.05em 0;
+  cursor: pointer;
+  border: 1px solid #023e8a;
+}
+
+.right .cont .patient label input {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.right .cont .p_details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  padding: 0.5em 0;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: none;
+}
+
+.right .cont .p_details .d_label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.2em 0.3em;
+  justify-content: space-between;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  column-gap: 0.2em;
+}
+
+.right .cont .p_details .d_label input {
+  padding: 0.8em 0.2em;
+  width: 90%;
+  text-transform: capitalize;
+  border-radius: 0.3em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  outline: none;
+  border: 1px solid #023e8a;
+}
+
+.right .cont .p_details .d_label input:focus {
+  border: 3px solid #023e8a;
+}
+
+.online {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1em 0.5em;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: capitalize;
+}
+.online input {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.online label {
+  display: flex;
+  align-items: center;
+  padding: 1.2em 0.3em;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 95%;
+  font-size: 1rem;
+  font-weight: 600;
+  column-gap: 0.2em;
+  background-color: white;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  cursor: pointer;
+  border: 1px solid #023e8a;
+}
+
+.online .book {
+  background-color: #023e8a;
+  color: white;
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.right .cont .online .book:hover {
+  background-color: white;
+  color: #023e8a;
+  transition: 0.1s;
+  border: 1px solid #023e8a;
+  font-weight: 700;
+}
+
+.right .terms {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 1em 0.5em;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  text-transform: capitalize;
+}
+
+.paynav {
+  display: flex;
+  border: 2px solid black;
+  height: 80vh;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+}
+
+.options {
+  width: 30%;
+}
+
+ .options ul {
+  list-style-position: inside;
+  list-style-type: none;
+  height: 100%;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+
+.options ul li {
+  padding: 1em 0.5em;
+  border-bottom: 3px solid #023e8a;
+  height: 10%;
+  font-size: 1.35rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: capitalize;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.options ul li a:hover {
+  background-color: #023e8a;
+  color: white;
+}
+
+.options ul li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: 100%;
+  padding: 0.7em 0.5em;
+  margin: auto 0;
+  text-transform: capitalize;
+  transition: 0.2s;
+}
+
+.acess {
+  width: 70%;
+}
+
+.creditcard {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.cardbox {
+  width: 80%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  align-items: center;
+}
+
+.cv {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid black;
+  -webkit-box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.cv label {
+  display: flex;
+  padding: 1em 0.3em;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  flex-direction: column;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.cv input {
+  border: none;
+  padding: 0.5em 0.2em;
+  border-bottom: 2px solid black;
+  font-size: 1.3rem;
+  width: 90%;
+  text-transform: uppercase;
+}
+
+.cv input:focus {
+  outline: none;
+}
+
+.cv .logo {
+  height: 6em;
+  background-color: #023e8a;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  box-sizing: border-box;
+}
+
+.logo label {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  padding: 0.5em;
+  font-size: 1rem;
+}
+
+.logo img {
+  width: 50%;
+  margin: auto;
+}
+
+.logo input {
+  width: 90%;
+  border: none;
+  padding: 0.5em 0.2em;
+  background-color: #f2f2f2;
+  border-bottom: 2px solid white;
+}
+
+.transactions {
+  width: 80%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em 1em;
+}
+
+.clogo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  margin: 0.5em 0;
+  padding: 0.5em 0;
+}
+
+.logic {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: white;
+  padding: 0.5em 0;
+  border: 3px solid black;
+}
+
+.clogo img {
+  width: 20%;
+  height: 100%;
+}
+
+.clogo input {
+  border: none;
+  padding: 0.5em 0.2em;
+  background-color: #f2f2f2;
+}
+
+.clogo button {
+  background-color: #023e8a;
+  color: white;
+  border: none;
+  padding: 0.3em;
+  border-radius: 0.5em;
+  font-size: 1.5rem;
+  width: 80%;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+/*bhim upi */
+
+.bhim_upi {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 0.5em 0;
+  border: 3px solid black;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.bhim_imge {
+  width: 100%;
+  height: 80%;
+  background-color: #023e8a;
+  padding: 1em;
+}
+
+.bhim_az {
+  width: 100%;
+  height: 80%;
+  padding: 1em;
+}
+
+.bhim_imge img {
+  width: 100%;
+  height: 100%;
+}
+
+.bhim_az img {
+  width: 100%;
+  height: 100%;
+}
+
+.bhim_form {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bhim_input {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bhim_input label {
+  color: #023e8a;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.bhim_input input {
+  border: none;
+  font-size: 1rem;
+  color: #023e8a;
+}
+
+.bhim_form button {
+  background-color: #023e8a;
+  color: white;
+  border: none;
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 0.2em;
+  font-size: 1.2rem;
+  width: 50%;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: 0.1s all ease-in-out;
+}
+
+.bhim_form button:hover {
+  color: #023e8a;
+  background-color: white;
+  border: 2px solid #023e8a;
+}

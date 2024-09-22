@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./home.module.css";
+import { NavLink } from "react-router-dom";
 
 const SuggestionList = ({ suggestions, handleSuggestClick }) => {
   if (suggestions.length === 0) {
@@ -8,7 +9,7 @@ const SuggestionList = ({ suggestions, handleSuggestClick }) => {
 
   const s_list = suggestions.map((suggestion, index) => {
     return (
-      <li
+       <li
         className={styles.suggestion}
         key={index}
         onClick={() => handleSuggestClick(suggestion)}

@@ -1,122 +1,84 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./home.module.css";
-import { useState, useEffect, useRef } from "react";
 import Location from "./location";
-import Form from "../Entry/form";
-import background from "./background_image_data";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { Link, useNavigate } from "react-router-dom";
-
+import img1 from "../assets/Home_care.jpg";
+import img2 from "../assets/lab_test.jpg";
+import img3 from "../assets/pharmacy.jpg";
+import img4 from "../assets/second_opinion.png";
+import img from "../assets/video_consultation.png";
+import HealthConcernsCarousel from "./HealthConcernsCarousel";
+import TestimonialsCarousel from "./Testimonials";
+import FooterPage from "./footer";
 function Cover() {
-  const back_CoverRef = useRef(null);
-  const courser_ref = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
-  const [lastindex, setn] = useState(0);
+  const carouselRef = useRef(null);
+  const [index, setIndex] = useState(0);
+  const images = [
+    { src: img1, title: "Home Care" },
+    { src: img2, title: "Lab Test" },
+    { src: img3, title: "Pharmacy" },
+    { src: img4, title: "Second Opinion" },
+  ];
 
   useEffect(() => {
-    const setB = () => {
-      const number = get_randombackground();
-      if (back_CoverRef.current) {
-        back_CoverRef.current.classList.remove(styles.slideIn);
-        courser_ref.current.classList.remove(styles.slide_head);
-        void back_CoverRef.current.offsetWidth;
-        void courser_ref.current.offsetWidth;
-        courser_ref.current.classList.add(styles.slide_head);
-        back_CoverRef.current.style.backgroundImage = `url(${background[number].image})`;
-      }
-    };
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => prevIndex + 1);
+    }, 5000); // Slow down the interval to 5 seconds
 
-    setB();
-    back_CoverRef.current.classList.remove(styles.slideIn);
-    const interval = setInterval(setB, 5000);
     return () => clearInterval(interval);
   }, []);
 
-  const get_randombackground = () => {
-    let new_index;
-    do {
-      new_index = Math.floor(Math.random() * background.length);
-    } while (new_index === lastindex);
-    setn(new_index);
-    return new_index;
-  };
-
+  useEffect(() => {
+    if (carouselRef.current) {
+      if (index === images.length) {
+        carouselRef.current.style.transition = "none";
+        carouselRef.current.style.transform = `translateX(0)`;
+        setTimeout(() => {
+          carouselRef.current.style.transition = "transform 1.5s ease-in-out";
+          setIndex(1);
+        }, 50);
+      } else {
+        carouselRef.current.style.transition = "transform 1.5s ease-in-out";
+        carouselRef.current.style.transform = `translateX(-${index * 100}vw)`;
+      }
+    }
+  }, [index]);
 
   return (
     <div>
-      <div className={styles.cover}>
-        <div className={styles.cover_text}>
-          <Location />
-          <div className={styles.coverContent}>
-            <div className={styles.healthTime}>
-              <h1>WELCOME TO Health Time</h1>
-              <h2>Your Health, Our Priority </h2>
-              <h3>
-                Connecting you with top healthcare professionals anytime,
-                anywhere
-              </h3>
-              <div className={styles.whyus}>
-                <h1>why us?</h1>
-                <ul className={styles.whyus_list}>
-                  <li>Wide Range of Specialists</li>
-                  <li>24/7 service round the clock</li>
-                  <li>emergency patient support</li>
-                  <li>100% Confidentiality in medical reports</li>
-                  <li> Efficient Follow-Up</li>
-                </ul>
-              </div>
+      <Location />
+      <div className={styles.carouselContainer}>
+        <div ref={carouselRef} className={styles.carousel}>
+          {images.concat(images[0]).map((img, i) => (
+            <div key={i} className={styles.carouselImageWrapper}>
+              <img
+                src={img.src}
+                alt={`Carousel Image ${i + 1}`}
+                className={styles.carouselImage}
+              />
+              <div className={styles.carouselTitle}>{img.title}</div>
             </div>
-          </div>
-        </div>
-        <div className={styles.cover_templates}>
-          <div
-            className={`${styles.blog} ${styles.blog1}`}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <h3>health blogs</h3>
-            {isHovered && (
-              <div className={styles.read_more}>
-                <p>read more</p>
-              </div>
-            )}
-          </div>
-          <div
-            className={`${styles.blog} ${styles.blog2}`}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <h3>medical news</h3>
-            {isHovered && (
-              <div className={styles.read_more}>
-                <p>read more</p>
-              </div>
-            )}
-          </div>
-          <div
-            className={`${styles.blog} ${styles.blog3}`}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <h3>stay healthy?</h3>
-            {isHovered && (
-              <div className={styles.read_more}>
-                <p>read more</p>
-              </div>
-            )}
-          </div>
-        </div>
-        <div className={styles.cover_image}>
-          <div ref={back_CoverRef} className={styles.back_Cover}>
-            <div className={styles.cover_headtext}>
-              <h1 className={styles.cover_heading} ref={courser_ref}>
-                {background[lastindex].content}
-              </h1>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
+      <div className={styles.videoVisit}>
+        <img src={img} alt="Video Visit" />
+        <div className={styles.videoVisit_content}>
+          <h2>Urgent care visits are only</h2>
+          <h3> Rs.1000 or less per visit</h3>
+          <p>
+            The cost of a virtual visit is less than the normal cost of an
+            urgent care or emergency room. Some insurance plans cover the cost
+            of virtual visits. If you don't have medical insurance, you can
+            still see one of our healthcare professionals and pay at the time of
+            your visit.
+          </p>
+          <button className={styles.videoVisit_button}>Get Care Now</button>
+        </div>
+      </div>
+      {/* Use the new HealthConcernsCarousel component */}
+      <HealthConcernsCarousel />
+      <TestimonialsCarousel />
+      <FooterPage />
     </div>
   );
 }

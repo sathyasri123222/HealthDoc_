@@ -1,0 +1,281 @@
+.offers {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  width: 72vw;
+  margin: auto;
+  row-gap: 0.8em;
+  background-color: #e6e6e6;
+  padding: 0 0.3em;
+}
+
+.poster {
+  width: 100%;
+  height: 18em;
+  border-radius: 1.25em;
+  background-image: url(fam.jpg);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid #023e8a;
+}
+
+.box1 {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  text-transform: capitalize;
+  align-items: first baseline;
+  padding: 0.5em 0;
+}
+
+.box1 h3 {
+  background-color: #023e8a;
+  color: white;
+  padding: 0.3em;
+  border-radius: 0.2em;
+}
+
+.box2 {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+  text-transform: capitalize;
+  padding: 0.5em 1.8em;
+}
+
+.box2 h1 {
+  font-size: 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #023e8a;
+  margin-bottom: 1em;
+}
+
+.box2 ul {
+  font-size: 1.2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #023e8a;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.box2 ul li {
+  list-style: none;
+  font-weight: 400;
+}
+
+.box2 .btn {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  justify-content: right;
+}
+
+.box2 .btn a {
+  font-size: 1.25rem;
+  padding: 0.5em 1em;
+  text-transform: capitalize;
+  border-radius: 0.3em;
+  background-color: #023e8a;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.box2 .btn a:hover {
+  background-color: #e6e6e6;
+  color: #023e8a;
+  border: 1px solid #023e8a;
+}
+
+.call {
+  width: 80%;
+  height: 7em;
+  border: 2px solid #023e8a;
+  padding: 1em 0.5em;
+  margin: 0.5em 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+}
+
+.callbox {
+  width: 10%;
+  height: 100%;
+  border: 2px solid #023e8a;
+  display: flex;
+  justify-content: center;
+  background-image: url(Call.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.call .experts {
+  width: 40%;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.call .numb {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.35rem;
+}
+
+.offers .scrollbox {
+  height: 15em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.offers .scrollbox .scroll {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  justify-content: space-evenly;
+}
+.offers .scrollbox::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.scrollbox .move {
+  width: 8%;
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.scrollbox .card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8em;
+  row-gap: 0.5em;
+  justify-content: center;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-transform: capitalize;
+}
+
+.scrollbox .card h3 {
+  background-color: #023e8a;
+  color: white;
+  padding: 0.3em;
+  border-radius: 0.2em;
+}
+
+.scrollbox .move p {
+  font-size: 3rem;
+  color: #023e8a;
+}
+
+.offers .scrollbox .scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.offers .scrollbox .scroll .scroll1,
+.scroll2,
+.scroll3 {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.offers .scrollbox .scroll .card {
+  width: 24%;
+  border: 2px solid black;
+  height: 100%;
+}
+
+.offers .con_head {
+  width: 100%;
+  height: 18em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid rgb(185, 3, 3);
+  text-transform: capitalize;
+  padding: 0.1em 1em;
+  background-color: #023e8a;
+  color: white;
+  margin-bottom: 1em;
+}
+
+.offers .concern {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+.offers .concern .issue {
+  width: 15%;
+  height: 80%;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.3em;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  background-color: white;
+  color: #023e8a;
+}
+
+.offers .concern .issue:hover {
+  scale: 1.09;
+  cursor: pointer;
+  border: 2px dotted #023e8a;
+  transition: all 0.5s ease;
+}
+
+.offers .concern img {
+  width: 100%;
+  height: 85%;
+  background-color: #023e8a;
+  border-radius: 50%;
+  border: 2px solid #023e8a;
+}

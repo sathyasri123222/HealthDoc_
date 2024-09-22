@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./home.module.css";
-import { Link,NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { HiUser } from "react-icons/hi2";
 import { IoIosLogIn } from "react-icons/io";
 import img from "../assets/seth.jpg";
@@ -9,19 +9,55 @@ function Log_navbar() {
   return (
     <>
       <div className={styles.login_navbar} id="navbar">
-        <div className={styles.logo} id="logo">
+        <NavLink to="/HealthDoc_/" className={styles.logo} id="logo">
           <img src={img} alt="" />
-        </div>
+        </NavLink>
         <div className={styles.login_service}>
-          <button>video consultation</button>
-          <button>medicines</button>
-          <button>lab tests</button>
-          <button>my health</button>
-          <button>doctor chat</button>
-          <button>surgeries</button>
+          <NavLink
+            to="vedio"
+            className={({ isActive }) => (isActive ? styles.ractive : "")}
+          >
+            vedio consultation
+          </NavLink>
+          <NavLink
+            to="medicines"
+            className={({ isActive }) => (isActive ? styles.ractive : "")}
+          >
+            medicines
+          </NavLink>
+          <NavLink
+            to="labtest"
+            className={({ isActive }) => (isActive ? styles.ractive : "")}
+          >
+            lab tests
+          </NavLink>
+          <NavLink
+            to="myhealth"
+            className={({ isActive }) => (isActive ? styles.ractive : "")}
+          >
+            my health
+          </NavLink>
+          <NavLink
+            to="chat"
+            className={({ isActive }) => (isActive ? styles.ractive : "")}
+          >
+            doctor chat
+          </NavLink>
+          <NavLink
+            to="surgeries"
+            className={({ isActive }) => (isActive ? styles.ractive : "")}
+          >
+            surgeries
+          </NavLink>
+          <NavLink to="emergency" className={styles.emergency} >
+            emergency
+          </NavLink>
         </div>
         <div className={styles.profile_Block}>
-          <NavLink to="/HealthDoc_/login" className={({ isActive }) => (isActive ? styles.active : "")}>
+          <NavLink
+            to="/HealthDoc_/doctor/Myprofile"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
             <HiUser />
             profile
           </NavLink>

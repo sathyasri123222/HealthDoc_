@@ -20,12 +20,15 @@ function Calendar() {
   const [night, setNight] = useState([]);
   const [afternoon, setAfternoon] = useState([]);
   const [check, setCheck] = useState(false);
+  const today = new Date();
+  const formatedate = today.toISOString();
 
   useEffect(() => {
     setDoctor_profile(Doc_data[params.id - 1]);
     setMorning(Appoint_times.morning[0]);
     setAfternoon(Appoint_times.afternoon[0]);
     setNight(Appoint_times.night[0]);
+    console.log(formatedate);
   }, []);
 
   function setTimes(kurg) {
@@ -68,7 +71,7 @@ function Calendar() {
               <FaIndianRupeeSign /> {doctor_profile.consultation_fee}
             </p>
             <NavLink
-              to="/HealthDoc_/doctor/payment"
+              to={`/HealthDoc_/doctor/bookappointment/${params.id}/payment`}
               className={({ isActive }) => (isActive ? styles.active : "")}
             >
               book doctor vist

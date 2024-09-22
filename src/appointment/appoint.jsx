@@ -34,6 +34,10 @@ function Book() {
                   <p>{doctor_profile.address}</p>
                 </div>
               </div>
+              <div className={styles.doctorsnote}>
+                <h3>{doctor_profile.name} note</h3>
+                <p>{doctor_profile.doctors_advice}</p>
+              </div>
             </div>
             <div className={styles.calendar}>
               <div className={styles.divcalendar}>

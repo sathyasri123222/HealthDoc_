@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Form from "../Entry/form";
 
 function Location() {
-  const [town, setTown] = useState("");
+  const [town, setTown] = useState("");  
   const [error, setError] = useState(null);
   const [doc_error, setDoc_error] = useState(null);
   const [doctors, setDoctors] = useState([]);
