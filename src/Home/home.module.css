@@ -14,7 +14,7 @@
 
 .ractive {
   background-color: rgb(241, 235, 235);
-  color:green;
+  color: green;
 }
 
 .navbar {
@@ -121,7 +121,7 @@
 
 .login,
 .profile_Block {
-  width: 12%;
+  width: 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -164,6 +164,7 @@
 .profile_Block a:hover {
   scale: 1.15;
 }
+
 
 .login .lang {
   color: black;
@@ -760,4 +761,13 @@
 .seeAllSymptoms:hover {
   background-color: #007bff;
   color: #fff;
+}
+
+.cart_count{
+  position: relative;
+  bottom: 0.4em;
+  font-size: 1.1rem;
+  background-color: white;
+  color:#023e8a;
+  border-radius: 30%;
 }

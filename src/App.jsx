@@ -1,4 +1,5 @@
 import { Routes, Route, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Login from "./login/login_page";
 import Signup from "./login/signin";
 import Form from "./Entry/form";
@@ -34,7 +35,19 @@ import Blood from "./lab_tests/bloodtest/Bloodtest";
 import MainTest from "./lab_tests/Main";
 import Lab_Payment from "./lab_tests/bloodtest/lab_payment";
 import Medicine from "./medicine_orders/medicine";
+import list from "./medicine_orders/order_data";
 function App() {
+  const [cart_data, setCart_data] = useState(list);
+  const [booked, setBook] = useState([]);
+
+  useEffect(() => {
+    console.log("Updated booked items:", booked);
+  }, [booked]);
+
+  const handleUpdateCart = (item) => {
+    setBook((prevBooked) => [...prevBooked, item]);
+  };
+
   return (
     <>
       <Routes basename="/HealthDoc_/">
@@ -57,14 +70,13 @@ function App() {
             <Route path="reviews" element={<Reviews_table />} />
           </Route>
           <Route path="emergency" element={<Emergency />} />
-
           <Route path="Myprofile" element={<Profile />}>
             <Route index element={<Myappointments />} />
             <Route path="appointments" element={<Myappointments />} />
             <Route path="labreports" element={<Reports />} />
             <Route path="medicalrecords" element={<Records />} />
             <Route path="consultation" element={<Consultation />} />
-            <Route path="medicines" element={<Orders />} />
+            <Route path="medicines" element={<Orders order={booked} />} />
             <Route path="articles" element={<Articles />} />
             <Route path="feedback" element={<Feedback />} />
             <Route path="mypayments" element={<Your_pay />} />
@@ -78,8 +90,12 @@ function App() {
             <Route path="amazon" element={<Amazon />} />
             <Route path="phone" element={<Phone />} />
           </Route>
-
-          <Route path="medicines" element={<Medicine />} />
+          <Route
+            path="medicines"
+            element={
+              <Medicine cart_data={cart_data} updateCart={handleUpdateCart} />
+            }
+          />
         </Route>
       </Routes>
     </>

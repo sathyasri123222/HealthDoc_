@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  border: 3px solid #023e8a;
+  display: flex;
+  flex-direction: column;
+}
+
+.days {
+  height: 3.5em;
+  box-sizing: border-box;
+  margin: 0.5em 0;
+  padding: 0.2em 0;
+}
+
+.weekdays {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  border: 5px solid #023e8a;
+}
+
+.gallery {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: none;
+  white-space: nowrap;
+  height: 100%;
+  column-gap: 0em;
+}
+
+.gallery div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  flex: none;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 0.1em 0;
+}
+
+.gallery div button {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #023e8a;
+  box-sizing: border-box;
+  scale: 1;
+}
+
+.gallery div button:hover {
+  background-color: white;
+  color: #023e8a;
+  border: 0.1em solid #023e8a;
+  transition: 0.2s;
+  font-weight: 600;
+  border-radius: 0.2em;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+.wbutton {
+  text-align: center;
+  cursor: pointer;
+  width: 5%;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.covers {
+  display: flex;
+}
+
+.maincover {
+  width: 75%;
+  padding: 1em 0.5em;
+  border: 2px solid #023e8a;
+  height: 100%;
+}
+
+.search {
+  width: 30%;
+}
+
+.bar {
+  height: 20%;
+  border: 1px solid black;
+  background-image: url(https://i.pinimg.com/originals/81/0b/4a/810b4ade0560620eed2ae596fc0aeb1c.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.med {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.med div {
+  width: 70%;
+  height: 20%;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.med div .chevron {
+  width: 10%;
+  font-size: 1.5rem;
+}
+
+.med div span {
+  height: 100%;
+  width: 30%;
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.med .content {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+.content p {
+  font-size: 1.12rem;
+  font-weight: 500;
+}
+
+.med div span p {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.med .med1 {
+  background-color: #e5f9f8;
+}
+
+.med .med3 {
+  background-color: #f1edfd;
+}
+
+.med .med4 {
+  background-color: #fff3d6;
+}
+
+.med .med2 {
+  background-color: #4c8059;
+  opacity: 0.8;
+}
+
+.bar label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  justify-content: space-between;
+}
+
+label p {
+  color: #023e8a;
+  font-weight: 600;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.bar input {
+  font-size: 1.3rem;
+  padding: 0.2em;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+
+.poster {
+  width: 100%;
+  height: 10rem;
+  border: 2px solid black;
+  border-radius: 0.5em;
+  background-image: url(https://images.pexels.com/photos/360622/pexels-photo-360622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 0 1em;
+  column-gap: 1.5em;
+  text-transform: capitalize;
+}
+
+.poster button {
+  font-size: 1.35rem;
+  padding: 0.5em;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 0.5em;
+  cursor: pointer;
+  background-color: #023e8a;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.5s 0.5ms;
+}
+
+.poster button:hover {
+  color: #023e8a;
+  background-color: white;
+  border: 1px solid #023e8a;
+}
+
+.rpos {
+  height: max-content;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 1em;
+  row-gap: 1em;
+  column-gap: 1em;
+  height: 25rem;
+}
+
+.rpos div {
+  width: 100%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  -webkit-box-shadow: 3px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.5s 0.5ms;
+  cursor: pointer;
+}
+
+.rpos div:hover {
+  scale: 1.03;
+}
+
+.jan {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxku91Mmhq_zzIWBE3dgnKhHxQsWHSpHZzew&s);
+}
+
+.feb {
+  background-image: url(https://naturaltein.in/wp-content/uploads/2024/06/Naturaltein-Creatine-Sale-scaled.webp);
+}
+
+.mar {
+  background-image: url(https://honasa-strapi-production.s3.ap-south-1.amazonaws.com/850x450_Salicylic_Acid_9883b731c3.jpg?fit=scale&w=400);
+}
+
+.apr {
+  background-image: url(https://www.lightupbeauty.com/cdn/shop/files/Flash_Sale_Banner_Mobile_Dimension_1.jpg?v=1724236964);
+}
+
+.may {
+  background-image: url(https://cashlelo.com/wp-content/uploads/2024/09/Health-Care-Devices.jpg);
+}
+
+/*cart design */
+.carts {
+  width: 100%;
+}

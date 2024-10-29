@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./home.module.css";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { HiUser } from "react-icons/hi2";
 import { IoIosLogIn } from "react-icons/io";
 import img from "../assets/seth.jpg";
+import { FaCartPlus } from "react-icons/fa";
 
 function Log_navbar() {
+  const [cart, setCart] = useState(1);
+
+  const handleClick = (item) => {
+    console.log(item);
+  };
   return (
     <>
       <div className={styles.login_navbar} id="navbar">
@@ -49,7 +55,7 @@ function Log_navbar() {
           >
             surgeries
           </NavLink>
-          <NavLink to="emergency" className={styles.emergency} >
+          <NavLink to="emergency" className={styles.emergency}>
             emergency
           </NavLink>
         </div>
@@ -60,6 +66,10 @@ function Log_navbar() {
           >
             <HiUser />
             profile
+          </NavLink>
+          <NavLink to="/HealthDoc_/doctor/Myprofile/medicines">
+            <FaCartPlus />
+            {cart>0&&<span className={styles.cart_count}>{cart}</span>}
           </NavLink>
           <Link className={styles.lang} to="/HealthDoc_/login">
             log out <IoIosLogIn />
